@@ -1,0 +1,149 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 300px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific styles for the app container */
+#app {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative; /* Added for absolute positioning of settings container */
+  overflow: hidden; /* Hide overflow during slide animation */
+}
+
+/* Styles for the detached player link */
+#detachedPlayerLink {
+  display: block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#detachedPlayerLink:hover {
+  text-decoration: underline;
+}
+
+/* New styles for settings section */
+#endpointUrl {
+  width: calc(100% - 16px); /* Adjust for padding */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#saveSettings {
+  background-color: #4CAF50; /* Green for save button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+#saveSettings:hover {
+  background-color: #45a049;
+}
+
+#statusMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Styles for icon buttons */
+.icon-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 5px;
+  margin: 0 5px;
+  position: absolute; /* Position the settings icon */
+  top: 5px;
+  right: 5px;
+}
+
+.icon-button:hover {
+  color: #0056b3;
+}
+
+/* Settings container slide animation */
+#settingsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0; /* Initially hidden */
+  overflow: hidden;
+  transition: height 0.3s ease-out, padding 0.3s ease-out; /* Animate height and padding */
+  background-color: #fff;
+  z-index: 10; /* Ensure it's above other content */
+  text-align: left; /* Align text within settings */
+}
+
+#settingsContainer.settings-visible {
+  height: 180px; /* Adjust height as needed for content */
+  padding: 10px;
+}
+
+#settingsContainer label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#openSettingsLink {
+  color: white;
+}
+
+#apiKeyStatusDiv {
+  color: white;
+}
+
+#settingsStatusMessage {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  margin-bottom: 0; /* Ensure no extra space when hidden */
+}
+
+#settingsStatusMessage.show {
+  max-height: 50px; /* Adjust based on expected message height */
+  padding: 8px;
+  margin-bottom: 10px;
+}

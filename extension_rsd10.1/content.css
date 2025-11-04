@@ -1,0 +1,147 @@
+/* content.css */
+
+.crush-control-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10000;
+  font-family: Arial, sans-serif;
+  min-width: 200px;
+}
+
+.crush-control-panel-info {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.crush-button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.crush-button-primary {
+  background: #007bff;
+  color: white;
+}
+
+.crush-button-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.crush-torrent-info-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 10001;
+  max-width: 400px;
+  color: black; /* Ensure text is readable on white background */
+}
+
+.crush-torrent-info-modal h3 {
+  margin-top: 0;
+  color: black;
+}
+
+.crush-torrent-info-modal p {
+  margin-bottom: 5px;
+  color: black;
+}
+
+.crush-torrent-info-modal .crush-button {
+  margin-top: 10px;
+}
+
+/* Styles for the new play button */
+.rsd-play-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px 10px;
+  color: white;
+  margin-left: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.rsd-play-button:hover {
+  background-color: #218838;
+}
+
+.rsd-magnet-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Subtitle progress animations */
+@keyframes fade-in-out {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.rsd-subtitle-progress.fade-out {
+  animation: fade-in-out 3s forwards;
+}
+
+.rsd-subtitle-progress.flash {
+  animation: flash 1s infinite alternate;
+}
+
+/* Snackbar styles */
+.rsd-snackbar {
+  position: fixed;
+  top: 20px; /* Position at the top */
+  left: 20px; /* Position at the left */
+  /* Removed transform: translateX(-50%); as it's no longer needed for centering */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 99999; /* Very high z-index to be on top of everything */
+  font-family: Arial, sans-serif;
+  display: flex; /* Use flex for centering content */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: flex-start; /* Align content to the start (left) */
+  gap: 5px; /* Spacing between items */
+  min-width: 250px;
+  max-width: 90%;
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Start invisible for fade-in */
+  transition: opacity 0.3s ease-in-out; /* Smooth opacity changes */
+}
+
+.rsd-snackbar.show {
+  opacity: 1;
+}
+
+.rsd-snackbar.hide {
+  opacity: 0;
+}

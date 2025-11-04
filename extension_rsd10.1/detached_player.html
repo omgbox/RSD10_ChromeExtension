@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="background-color: #1a1a1a;">
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- The title is dynamically set by detached_player.js based on the video filename. -->
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <!-- The HTML5 video element for playing the streamed content. -->
+  <video id="detachedVideoPlayer" controls autoplay></video>
+
+  <!-- Script to handle video playback, subtitle loading, and dynamic title setting. -->
+  <script type="module" src="detached_player.js"></script>
+</body>
+</html>

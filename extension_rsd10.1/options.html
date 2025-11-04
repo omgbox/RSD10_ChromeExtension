@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RSD API Settings</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 1rem;
+      margin: 1em;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+    input {
+      width: 300px;
+    }
+    button {
+      display: block;
+      width: fit-content; /* Adjust width as needed */
+      margin-top: 1em;
+      margin-bottom: 1em; /* Add margin below the button */
+    }
+    #status {
+      display: block;
+      margin-top: 1em;
+      color: green;
+      min-height: 1.2em; /* Approximate height of one line of text */
+    }
+  </style>
+</head>
+<body>
+  <h1>RSD API Settings</h1>
+  <label for="apiKey">API Key:</label>
+  <input type="text" id="apiKey">
+  <button id="save">Save</button>
+  <div id="status"></div>
+  <div id="expirationDate"></div>
+  <script src="options.js"></script>
+</body>
+</html>
