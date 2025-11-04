@@ -6,7 +6,7 @@ Stream videos directly from torrent files or magnet links using a remote API. Th
 
 server space is limited global space is 15gb, inactive files will be automatically removed by system. 
 
-
+check https://github.com/omgbox/RSD10_ChromeExtension/blob/main/extension_rsd10.1/GEMINI.md
 ----------------------------------------------------------------------------------------------------
 Step-by-Step Guide
 Open the Extensions Page
