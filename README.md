@@ -5,3 +5,32 @@ Stream videos directly from torrent files or magnet links using a remote API. Th
 
 
 server space is limited global space is 15gb, inactive files will be automatically removed by system. 
+
+
+----------------------------------------------------------------------------------------------------
+Step-by-Step Guide
+Open the Extensions Page
+
+In Chrome, type chrome://extensions into the address bar and press Enter.
+
+Alternatively, click the three-dot menu → More tools → Extensions.
+
+Enable Developer Mode
+
+In the top-right corner of the Extensions page, toggle Developer mode on.
+
+This unlocks options for loading unpacked extensions.
+
+Load the Extension
+
+Click the Load unpacked button.
+
+Navigate to the folder where your extension files are stored.
+
+Select the folder that contains the manifest.json file (this is required for Chrome to recognize the extension).
+
+Confirm Installation
+
+The extension should now appear in your list of installed extensions.
+
+If it has a browser action (like a toolbar button), you’ll see its icon appear next to the address bar.
