@@ -1,5 +1,5 @@
 # RSD10_ChromeExtension
-Stream videos directly from torrent files or magnet links using a remote API. This extension allows you to watch videos without downloading
+Stream videos directly from torrent files or magnet links using a remote API. This extension allows you to watch videos without downloading, supports everything public magnet site that provides magnet: to users
 
 490b5542b9b7a8f34b0c5935c9035ef5	04/11/2025, 00:25:15	Key will Expire in 04/12/2025, 00:25:15 
 
