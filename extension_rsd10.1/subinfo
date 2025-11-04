@@ -1,6 +1,0 @@
-  rsd-play-button will now automatically:
-
-   1. Identify the largest video file.
-   2. Prioritize finding and extracting a matching English SRT subtitle.
-   3. Fall back to probing for embedded subtitles if no English SRT is found.
-   4. Open the detached player with the video and, if successful, the converted VTT subtitles.
