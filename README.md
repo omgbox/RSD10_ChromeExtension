@@ -1,7 +1,7 @@
 # RSD10_ChromeExtension
 Stream videos directly from torrent files or magnet links using a remote API. This extension allows you to watch videos without downloading, supports every public magnet site that provides magnet: to users
 
-5117a1939be98338de98b89d62fd7cfe		04/11/2025, 00:25:15	Key will Expire in 04/12/2025, 00:25:15 
+5117a1939be98338de98b89d62fd7cfe		04/11/2025, 00:25:15	Key will Expire in 14/12/2025, 01:56:45
 
 
 server space is limited global space is 15gb, inactive files will be automatically removed by system. 
