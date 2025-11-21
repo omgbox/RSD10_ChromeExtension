@@ -3,34 +3,35 @@ Stream videos directly from torrent files or magnet links using a remote API. Th
 
 3ab88bfa15a0b18a0d5d6b4fd45d65fd		04/11/2025, 00:25:15	Key will Expire in 14/12/2025, 01:56:45
 
+# Project: Browser Extension
 
-server space is limited global space is 15gb, inactive files will be automatically removed by system. 
+## Project Overview
 
-check https://github.com/omgbox/RSD10_ChromeExtension/blob/main/extension_rsd10.1/GEMINI.md
-----------------------------------------------------------------------------------------------------
-Step-by-Step Guide
-Open the Extensions Page
+This is a browser extension designed to enhance the video streaming experience on `rsd.ovh`. It provides two main functionalities:
 
-In Chrome, type chrome://extensions into the address bar and press Enter.
+1.  **Cast Button:** Injects a "Cast" button on `rsd.ovh/stream` pages, allowing users to cast the currently playing media to a Chromecast device.
+2.  **Detached Video Player for Magnet Links:** Injects a "Play" button next to magnet links. Clicking this button opens a detached video player in a new window. This player attempts to stream the video content from the magnet link and automatically detects, extracts, and displays subtitles (SRT/VTT) associated with the video.
 
-Alternatively, click the three-dot menu → More tools → Extensions.
+The extension utilizes a background script for handling API interactions (fetching torrent files, subtitle extraction), a content script for injecting UI elements and communicating with the background script, and a dedicated HTML/JS pair for the detached video player.
 
-Enable Developer Mode
+## Building and Running
 
-In the top-right corner of the Extensions page, toggle Developer mode on.
+This project is a Chrome Extension and does not require a traditional build process. To run and test the extension:
 
-This unlocks options for loading unpacked extensions.
+1.  **Load as Unpacked Extension:**
+    *   Open Google Chrome.
+    *   Navigate to `chrome://extensions/`.
+    *   Enable "Developer mode" (usually a toggle in the top right corner).
+    *   Click "Load unpacked" and select the `/home/extension/` directory.
 
-Load the Extension
+2.  **Testing Functionality:**
+    *   Navigate to an `rsd.ovh/stream` page to test the "Cast" button.
+    *   Navigate to a page containing magnet links (e.g., a torrent indexer) to test the "Play" button and the detached video player with subtitle functionality.
 
-Click the Load unpacked button.
+## Development Conventions
 
-Navigate to the folder where your extension files are stored.
-
-Select the folder that contains the manifest.json file (this is required for Chrome to recognize the extension).
-
-Confirm Installation
-
-The extension should now appear in your list of installed extensions.
-
-If it has a browser action (like a toolbar button), you’ll see its icon appear next to the address bar.
+*   **JavaScript:** Standard JavaScript practices are followed.
+*   **Chrome Extension APIs:** Utilizes `chrome.runtime`, `chrome.tabs`, `chrome.windows`, and `chrome.offscreen` APIs for inter-component communication and browser functionality.
+*   **API Interaction:** Interacts with an external API (`https://rsd.ovh`) for file listing, subtitle probing, and subtitle extraction.
+*   **DOM Manipulation:** Content scripts directly manipulate the DOM of `rsd.ovh` pages to inject buttons.
+*   **Subtitle Handling:** The background script handles the logic for finding the largest video file, identifying potential subtitle files (SRT, embedded in MKV), initiating subtitle extraction, and passing the resulting VTT URL to the detached player. The detached player dynamically adds the VTT track to the HTML5 video element.
